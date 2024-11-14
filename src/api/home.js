@@ -1,6 +1,6 @@
 import httpInstance from "@/utils/http";
 
-export const getBannerAPI = () => httpInstance.get("home/banner");
+export const getBannerAPI = () => httpInstance.get("/home/banner");
 
 // /**
 //  * @description: 获取新鲜好物
@@ -8,3 +8,5 @@ export const getBannerAPI = () => httpInstance.get("home/banner");
 //  * @return {*}
 //  */
 export const findNewAPI = () => httpInstance.get("/home/new");
+
+export const getHotAPI = () => httpInstance.get("/home/hot");

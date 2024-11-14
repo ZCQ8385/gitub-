@@ -1,6 +1,6 @@
 <script setup>
 import HomePanel from "./HomePanel.vue";
-import { findNewAPI } from "@/apis/home";
+import { findNewAPI } from "@/api/home";
 import { onMounted, ref } from "vue";
 
 // 获取数据
