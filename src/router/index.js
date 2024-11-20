@@ -20,8 +20,11 @@ const router = createRouter({
         },
       ],
     },
-
     { path: "/login", component: () => import("@/views/Login/index.vue") },
+    {
+      path: "/detail/:id",
+      component: () => import("@/views/Detail/index.vue"),
+    },
   ],
   //路由滚动行为定制
   scrollBehavior() {
