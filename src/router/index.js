@@ -18,6 +18,10 @@ const router = createRouter({
           path: "category/sub/:id",
           component: () => import("@/views/SubCategory/index.vue"),
         },
+        {
+          path: "cartlist",
+          component: () => import("@/views/CartList/indev.vue"),
+        },
       ],
     },
     { path: "/login", component: () => import("@/views/Login/index.vue") },
