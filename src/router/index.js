@@ -22,12 +22,41 @@ const router = createRouter({
           path: "cartlist",
           component: () => import("@/views/CartList/indev.vue"),
         },
+        {
+          path: "checkout",
+          component: () => import("@/views/Checkout/index.vue"),
+        },
+        {
+          path: "/detail/:id",
+          component: () => import("@/views/Detail/index.vue"),
+        },
+        {
+          path: "pay",
+          component: () => import("@/views/pay/index.vue"),
+        },
+        {
+          path: "paycallback",
+          component: () => import("@/views/pay/payBack.vue"),
+        },
+        {
+          path: "member",
+          component: () => import("@/views/Member/index.vue"),
+          children: [
+            {
+              path: "user",
+              component: import("@/views/Member/components/UserInfo.vue"),
+            },
+            {
+              path: "order",
+              component: import("@/views/Member/components/UserOrder.vue"),
+            },
+          ],
+        },
       ],
     },
-    { path: "/login", component: () => import("@/views/Login/index.vue") },
     {
-      path: "/detail/:id",
-      component: () => import("@/views/Detail/index.vue"),
+      path: "/login",
+      component: () => import("@/views/Login/index.vue"),
     },
   ],
   //路由滚动行为定制

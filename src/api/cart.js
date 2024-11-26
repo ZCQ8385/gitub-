@@ -13,3 +13,23 @@ export const insertCartAPI = ({ skuId, count }) => {
 };
 //获取最新
 export const findNewCartListAPI = () => request.get("/member/cart");
+
+// 删除购物车
+export const delCartAPI = (ids) => {
+  return request({
+    url: "/member/cart",
+    method: "DELETE",
+    data: {
+      ids,
+    },
+  });
+};
+
+//合并购物车
+export const mergeCartAPI = (data) => {
+  return request({
+    url: "/member/cart/merge",
+    method: "POST",
+    data,
+  });
+};
