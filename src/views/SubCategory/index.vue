@@ -13,6 +13,9 @@ const getFilterData = async () => {
 
 onMounted(() => getFilterData());
 
+//无用代码
+const disabled = ref(false);
+
 const goodList = ref({});
 const reqData = ref({
   categoryId: route.params.id,
